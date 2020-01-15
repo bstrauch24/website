@@ -1,8 +1,8 @@
 {
-  "homepage": "https://bstrauch24.github.io/website/"
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://www.brian-strauch.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
