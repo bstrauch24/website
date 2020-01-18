@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import logo from './logo.svg';
-import './index.css';
+import './style.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <h1>Hi, I'm<br />Brian</h1>
     </div>
   );
 }
