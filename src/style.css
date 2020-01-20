@@ -8,6 +8,21 @@ body, h1 {
   margin: 0;
 }
 
+a {
+  color: inherit;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  .App {
+    background: black;
+    color: white;
+  }
+}
+
 .App h1 {
   position: absolute;
   top: 10vh;

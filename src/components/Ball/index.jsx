@@ -1,22 +1,26 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import github from '../../assets/github.svg';
+import './style.css';
+
+const link = 'https://github.com/bstrauch24';
 
 function Ball(props) {
-  const link = 'https://github.com/bstrauch24';
   const { x, y, r } = props;
 
   const style = {
-    width: (2 * r) + 'px',
     position: 'absolute',
     left: x - r,
-    top: y - r
+    top: y - r,
+    width: (2 * r) + 'px',
+    height: (2 * r) + 'px'
   };
 
   return (
     <div className="Ball" style={style}>
       <a href={link}>
-        <img src={github} alt="github" />
+        <FontAwesomeIcon className="icon" icon={faGithub} />
       </a>
     </div>
   );
