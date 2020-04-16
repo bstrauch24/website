@@ -1,27 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
 * {
+  font-family: 'Roboto';
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  * {
-    background: black;
-    color: white;
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground: black;
+    --background: white;
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: white;
+    --background: black;
+  }
+}
+
+* {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
 body {
-  font-family: 'Roboto';
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App {
-  min-height: 100vh;
+  padding: 64px;
+  font-size: 32px;
 }
 
-h1 {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  font-size: 16vw;
+.App a {
+  text-decoration: underline;
 }
