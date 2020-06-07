@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
-* {
-  font-family: 'Roboto';
-  margin: 0;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --foreground: black;
@@ -20,6 +15,9 @@
 }
 
 * {
+  font-family: 'Roboto';
+  margin: 0;
+
   background: var(--background);
   color: var(--foreground);
 }
@@ -29,20 +27,20 @@
   color: var(--background);
 }
 
-body {
-  height: 100vh;
-  overflow: hidden;
+a {
+  text-decoration: none;
 }
 
-.App {
+a:hover {
+  text-decoration: underline;
+}
+
+.Home {
   padding: 64px;
   font-size: 32px;
 }
 
-.App a {
-  text-decoration: none;
-}
-
-.App a:hover {
-  text-decoration: underline;
+.Home body {
+  height: 100vh;
+  overflow: hidden;
 }
