@@ -16,10 +16,17 @@
 
 * {
   font-family: 'Roboto';
+  font-size: 32px;
   margin: 0;
 
   background: var(--background);
   color: var(--foreground);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  padding: 64px;
 }
 
 ::selection {
@@ -35,12 +42,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.Home {
-  padding: 64px;
-  font-size: 32px;
-}
-
-.Home body {
-  height: 100vh;
-  overflow: hidden;
+.Random select, input, button {
+  border: 2px solid var(--foreground);
+  margin: 8px;
+  outline: none;
 }
