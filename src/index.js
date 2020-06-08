@@ -101,14 +101,8 @@ class Random extends React.Component {
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/random">
-          <Random />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/random" component={Random} />
     </BrowserRouter>
   );
 }
