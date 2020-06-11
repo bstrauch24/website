@@ -15,12 +15,11 @@
 }
 
 * {
-  font-family: 'Roboto';
-  font-size: 32px;
-  margin: 0;
-
   background: var(--background);
   color: var(--foreground);
+  font-family: 'Roboto';
+  font-size: 40px;
+  margin: 0;
 }
 
 body {
@@ -34,16 +33,18 @@ body {
   color: var(--background);
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .Random select, input, button {
   border: 2px solid var(--foreground);
+  height: 64px;
   margin: 8px;
   outline: none;
+}
+
+.Random input {
+  padding-left: 8px;
+}
+
+.Random #addr {
+  margin-left: 0;
+  width: 640px;
 }
