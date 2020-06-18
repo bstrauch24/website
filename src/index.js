@@ -60,7 +60,7 @@ class Random extends React.Component {
 
   generate = src => {
     const { mode, dist, addr } = this.state;
-    
+
     let p = Math.random();
     let dx = (Math.random() < 0.5 ? 1 : -1) * dist * p;
     let dy = (Math.random() < 0.5 ? 1 : -1) * dist * (1 - p);
@@ -75,7 +75,7 @@ class Random extends React.Component {
     };
 
     let modeId = (mode === 'bike' ? 1 : 2);
-    window.open(`https://www.google.com/maps/dir/${addr}/${dst.lat},${dst.lon}/data=4m2!4m1!3e${modeId}`, '_blank');
+    window.open(`https://www.google.com/maps/dir/${addr}/${dst.lat},${dst.lon}/data=4m2!4m1!3e${modeId}`, '_self');
   }
 
   radToDeg = rad => {
