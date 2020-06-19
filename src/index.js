@@ -21,7 +21,7 @@ class Random extends React.Component {
     super(props);
 
     this.state = {
-      mode: 'bike',
+      mode: 'bicycling',
       dist: 10,
       addr: '610 E Stoughton St, Champaign, IL',
       save: [undefined, undefined], // [addr, src]
@@ -49,7 +49,7 @@ class Random extends React.Component {
     }
 
     fetch(`https://nominatim.openstreetmap.org/search?q=${addr}&format=json`).then(res => res.json()).then(res => {
-      let src = {
+      const src = {
         lat: Number(res[0]['lat']),
         lon: Number(res[0]['lon']),
       };
@@ -61,21 +61,22 @@ class Random extends React.Component {
   generate = src => {
     const { mode, dist, addr } = this.state;
 
-    let p = Math.random();
-    let dx = (Math.random() < 0.5 ? 1 : -1) * dist * p;
-    let dy = (Math.random() < 0.5 ? 1 : -1) * dist * (1 - p);
+    const distOneWay = dist / 2.0;
+
+    const p = Math.random();
+    const dx = (Math.random() < 0.5 ? 1 : -1) * distOneWay * p;
+    const dy = (Math.random() < 0.5 ? 1 : -1) * distOneWay * (1 - p);
 
     const EARTH_RADIUS = 3959;
-    let dLat = this.radToDeg(dy / EARTH_RADIUS);
-    let dLon = this.radToDeg(dx / EARTH_RADIUS);
+    const dLat = this.radToDeg(dy / EARTH_RADIUS);
+    const dLon = this.radToDeg(dx / EARTH_RADIUS);
 
-    let dst = {
+    const dst = {
       lat: src.lat + dLat,
       lon: src.lon + dLon,
     };
 
-    let modeId = (mode === 'bike' ? 1 : 2);
-    window.open(`https://www.google.com/maps/dir/${addr}/${dst.lat},${dst.lon}/data=4m2!4m1!3e${modeId}`, '_self');
+    window.open(`https://www.google.com/maps/dir/?api=1&origin=${addr}&waypoints=${dst.lat},${dst.lon}&destination=${addr}&travelmode=${mode}`, '_self');
   }
 
   radToDeg = rad => {
@@ -83,15 +84,15 @@ class Random extends React.Component {
   }
 
   render() {
-    let { mode, dist, addr } = this.state;
+    const { mode, dist, addr } = this.state;
 
     return (
       <div className="Random">
         I want to
 
         <select defaultValue={mode} onChange={this.changeMode}>
-          <option value="bike">bike</option>
-          <option value="run">run</option>
+          <option value="bicycling">bike</option>
+          <option value="walking">run</option>
         </select>
 
         <input

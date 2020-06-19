@@ -34,7 +34,7 @@ body {
 }
 
 .Random select, input, button {
-  border: 2px solid var(--foreground);
+  border: 4px solid var(--foreground);
   height: 64px;
   margin: 8px;
   outline: none;
@@ -47,4 +47,9 @@ body {
 .Random #addr {
   margin-left: 0;
   width: 640px;
+}
+
+.Random button:hover {
+  background: var(--foreground);
+  color: var(--background);
 }
