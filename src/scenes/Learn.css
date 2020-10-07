@@ -1,0 +1,34 @@
+.Question {
+  position: relative;
+
+  border-radius: 8px;
+  margin-top: 16px;
+  width: 50%;
+
+  border: 2px solid var(--blueberry);
+  background: var(--cloud);
+}
+
+.Question label {
+  font-size: 32px;
+}
+
+.Question #answer {
+  border-radius: 4px;
+  border: 2px solid var(--blueberry);
+  margin-left: 16px;
+  margin-bottom: 72px;
+}
+
+.Question #check input {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+
+  background: var(--blueberry);
+  color: var(--cloud);
+}

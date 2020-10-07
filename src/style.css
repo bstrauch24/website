@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,0..1&display=swap');
 
 * {
-  --cloud: #FFFFFF;
-  --sky: #F1FAEE;
-  --sea: #A8DADC;
-  --neptune: #457B9D;
   --blueberry: #1D3557;
+  --cloud: #FFFFFF;
+  --neptune: #457B9D;
   --pomegranate: #E63946;
+  --sea: #A8DADC;
+  --sky: #F1FAEE;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,15 +24,13 @@
 }
 
 * {
-  background: var(--background);
   color: var(--foreground);
   font-family: 'Recursive';
   margin: 0;
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
+  background: var(--background);
   padding: 64px;
 }
 
