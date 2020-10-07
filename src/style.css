@@ -1,23 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,0..1&display=swap');
+
+* {
+  --cloud: #FFFFFF;
+  --sky: #F1FAEE;
+  --sea: #A8DADC;
+  --neptune: #457B9D;
+  --blueberry: #1D3557;
+  --pomegranate: #E63946;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
-    --foreground: black;
-    --background: white;
+    --background: var(--cloud);
+    --foreground: var(--blueberry);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: white;
-    --background: black;
+    --background: var(--blueberry);
+    --foreground: var(--cloud);
   }
 }
 
 * {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Roboto';
+  font-family: 'Recursive';
   font-size: 40px;
   margin: 0;
 }
@@ -28,28 +37,11 @@ body {
   padding: 64px;
 }
 
+a:hover {
+  color: var(--pomegranate);
+}
+
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
-}
-
-.Random select, input, button {
-  border: 4px solid var(--foreground);
-  height: 64px;
-  margin: 8px;
-  outline: none;
-}
-
-.Random input {
-  padding-left: 8px;
-}
-
-.Random #addr {
-  margin-left: 0;
-  width: 640px;
-}
-
-.Random button:hover {
   background: var(--foreground);
   color: var(--background);
 }
