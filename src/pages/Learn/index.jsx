@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Question from '../components/Question';
-import './Learn.css';
+import Question from '../../components/Question';
+import './style.css';
 
 export default function Learn() {
   return (

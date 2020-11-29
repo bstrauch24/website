@@ -1,25 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,0..1&display=swap');
 
-* {
-  --blueberry: #1D3557;
-  --cloud: #FFFFFF;
-  --neptune: #457B9D;
-  --pomegranate: #E63946;
-  --sea: #A8DADC;
-  --sky: #F1FAEE;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-    --background: var(--cloud);
-    --foreground: var(--blueberry);
+    --background: white;
+    --foreground: black;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--blueberry);
-    --foreground: var(--cloud);
+    --background: black;
+    --foreground: white;
   }
 }
 
@@ -32,10 +23,6 @@
 body {
   background: var(--background);
   padding: 64px;
-}
-
-a:hover {
-  color: var(--pomegranate);
 }
 
 ::selection {
