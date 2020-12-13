@@ -16,12 +16,14 @@
 
 * {
   color: var(--foreground);
+  background: var(--background);
+  border-color: var(--foreground);
   font-family: 'Recursive';
+  font-size: 32px;
   margin: 0;
 }
 
 body {
-  background: var(--background);
   padding: 64px;
 }
 
