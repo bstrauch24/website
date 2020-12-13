@@ -5,6 +5,7 @@ import Join from '../Join';
 import './style.css';
 
 // TODO: Fix issues with refresh and back button
+// TODO: Prevent WS error on other pages
 
 const ws = new WebSocket('ws://localhost:1024/tic-tac-toe');
 
