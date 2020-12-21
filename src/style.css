@@ -17,9 +17,8 @@
 * {
   color: var(--foreground);
   background: var(--background);
-  border-color: var(--foreground);
   font-family: 'Recursive';
-  font-size: 32px;
+  font-size: 40px;
   margin: 0;
   outline: none;
 }
