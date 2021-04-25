@@ -7,7 +7,7 @@ let img = new Image();
 img.onload = function() {
     let pixels = getPixels(img);
 
-    fetch(`samples/${title}-data-2x.json`).then(res => res.json()).then(data => {
+    fetch(`${title}-data-2x.json`).then(res => res.json()).then(data => {
         ctx.putImageData(resize(canvas, pixels, data), 0, 0);
 
         window.onresize = function() {
@@ -16,7 +16,7 @@ img.onload = function() {
     });
 };
 
-img.src = `samples/${title}-2x.jpg`;
+img.src = `${title}-2x.jpg`;
 
 // Create an offscreen canvas to get pixel data for the image
 function getPixels(img) {
